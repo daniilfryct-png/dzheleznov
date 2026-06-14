@@ -1,0 +1,145 @@
+[
+  {
+    "id": "col-001",
+    "slug": "summer",
+    "title": "SUMMER",
+    "year": 2026,
+    "season": "Коллекция",
+    "description": "Коллекция SUMMER D.ZHELEZNOV.",
+    "statement": "",
+    "coverImage": "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+    "campaignImages": [
+      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+      "/content/collections/remind/remind-hoodie/1.PNG",
+      "/content/collections/remind/remind-jacket/1%27.PNG",
+      "/content/collections/remind/remind-longsleeve/1.PNG",
+      "/content/collections/remind/remind-polo/1.PNG",
+      "/content/collections/remind/remind-skirt/1.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
+      "/content/collections/remind/remind-stripped-jeans/1.PNG"
+    ],
+    "lookbook": [
+      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+      "/content/collections/remind/remind-hoodie/1.PNG",
+      "/content/collections/remind/remind-jacket/1%27.PNG",
+      "/content/collections/remind/remind-longsleeve/1.PNG",
+      "/content/collections/remind/remind-polo/1.PNG",
+      "/content/collections/remind/remind-skirt/1.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
+      "/content/collections/remind/remind-stripped-jeans/1.PNG"
+    ],
+    "designNotes": [],
+    "behindTheScenes": [],
+    "featured": true
+  },
+  {
+    "id": "col-002",
+    "slug": "remind",
+    "title": "REMIND",
+    "year": 2025,
+    "season": "Коллекция",
+    "description": "Коллекция REMIND D.ZHELEZNOV.",
+    "statement": "",
+    "coverImage": "/content/collections/remind/IMG_2053.JPG",
+    "campaignImages": [
+      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+      "/content/collections/remind/remind-hoodie/1.PNG",
+      "/content/collections/remind/remind-jacket/1%27.PNG",
+      "/content/collections/remind/remind-longsleeve/1.PNG",
+      "/content/collections/remind/remind-polo/1.PNG",
+      "/content/collections/remind/remind-skirt/1.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
+      "/content/collections/remind/remind-stripped-jeans/1.PNG"
+    ],
+    "lookbook": [
+      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+      "/content/collections/remind/remind-hoodie/1.PNG",
+      "/content/collections/remind/remind-jacket/1%27.PNG",
+      "/content/collections/remind/remind-longsleeve/1.PNG",
+      "/content/collections/remind/remind-polo/1.PNG",
+      "/content/collections/remind/remind-skirt/1.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
+      "/content/collections/remind/remind-stripped-jeans/1.PNG"
+    ],
+    "designNotes": [],
+    "behindTheScenes": [],
+    "featured": true
+  },
+  {
+    "id": "col-003",
+    "slug": "none",
+    "title": "NONE",
+    "year": 2025,
+    "season": "Коллекция",
+    "description": "Коллекция NONE D.ZHELEZNOV.",
+    "statement": "",
+    "coverImage": "/content/collections/none/jacket-art/1.PNG",
+    "campaignImages": [
+      "/content/collections/none/jacket-art/1.PNG",
+      "/content/collections/none/jacket-velvet/1.png",
+      "/content/collections/none/leather-jacket/1.PNG",
+      "/content/collections/none/t-shirt/1.PNG",
+      "/content/collections/none/t-shirt-black/1.PNG",
+      "/content/collections/none/trousers-is-gook/1.PNG"
+    ],
+    "lookbook": [
+      "/content/collections/none/jacket-art/1.PNG",
+      "/content/collections/none/jacket-velvet/1.png",
+      "/content/collections/none/leather-jacket/1.PNG",
+      "/content/collections/none/t-shirt/1.PNG",
+      "/content/collections/none/t-shirt-black/1.PNG",
+      "/content/collections/none/trousers-is-gook/1.PNG"
+    ],
+    "designNotes": [],
+    "behindTheScenes": [],
+    "featured": false
+  },
+  {
+    "id": "col-004",
+    "slug": "vl-pt2",
+    "title": "V.L.pt2",
+    "year": 2025,
+    "season": "Коллекция",
+    "description": "Коллекция V.L.pt2 D.ZHELEZNOV.",
+    "statement": "",
+    "coverImage": "/content/collections/vl-pt2/coat-cross/1.png",
+    "campaignImages": [
+      "/content/collections/vl-pt2/coat-cross/1.png",
+      "/content/collections/vl-pt2/jeans-vl/1.png",
+      "/content/collections/vl-pt2/jeans-vl2/1.png",
+      "/content/collections/vl-pt2/longsleeve-white/1.png",
+      "/content/collections/vl-pt2/shirt-black/1.png"
+    ],
+    "lookbook": [
+      "/content/collections/vl-pt2/coat-cross/1.png",
+      "/content/collections/vl-pt2/jeans-vl/1.png",
+      "/content/collections/vl-pt2/jeans-vl2/1.png",
+      "/content/collections/vl-pt2/longsleeve-white/1.png",
+      "/content/collections/vl-pt2/shirt-black/1.png"
+    ],
+    "designNotes": [],
+    "behindTheScenes": [],
+    "featured": false
+  },
+  {
+    "id": "col-005",
+    "slug": "ls-2-25",
+    "title": "L.S.2.25",
+    "year": 2025,
+    "season": "Коллекция",
+    "description": "Коллекция L.S.2.25 D.ZHELEZNOV.",
+    "statement": "",
+    "coverImage": "/content/collections/ls-2-25/waves-sweatshirt/IMG_0671.PNG",
+    "campaignImages": [
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_0671.PNG",
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3924.PNG"
+    ],
+    "lookbook": [
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_0671.PNG",
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3924.PNG"
+    ],
+    "designNotes": [],
+    "behindTheScenes": [],
+    "featured": false
+  }
+]

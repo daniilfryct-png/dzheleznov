@@ -1,0 +1,513 @@
+[
+  {
+    "id": "prod-001",
+    "slug": "remind-cowboy-jeans",
+    "name": "REMIND cowboy jeans",
+    "price": 5799,
+    "currency": "₽",
+    "description": "- 70% ХЛОПОК 30% ПОЛИЭСТЕР\n- ПЛОТНОСТЬ: 310 ГР/М2\n- SLIM FIT\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
+      "/content/collections/remind/remind-cowboy-jeans/2.PNG",
+      "/content/collections/remind/remind-cowboy-jeans/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": true,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-002",
+    "slug": "remind-hoodie",
+    "name": "REMIND hoodie",
+    "price": 5999,
+    "currency": "₽",
+    "description": "- 97% ХЛОПОК 3% ЭЛАСТАН\n- 400 ГР/М2\n- OVERSIZE УКОРОЧЕННЫЙ КРОЙ\n- ИТАЛЬЯНСКИЙ ФУТЕР\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-hoodie/1.PNG",
+      "/content/collections/remind/remind-hoodie/2.PNG",
+      "/content/collections/remind/remind-hoodie/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": true,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-003",
+    "slug": "remind-jacket",
+    "name": "REMIND jacket",
+    "price": 7999,
+    "currency": "₽",
+    "description": "- 70% ХЛОПОК 7% ЭЛАСТАН\n- ПЛОТНОСТЬ: 400 ГР/М2\n- REGULAR FIT\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-jacket/1%27.PNG",
+      "/content/collections/remind/remind-jacket/2.PNG",
+      "/content/collections/remind/remind-jacket/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": true,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-004",
+    "slug": "remind-longsleeve",
+    "name": "REMIND longsleeve",
+    "price": 2999,
+    "currency": "₽",
+    "description": "- 25% ЛЕН, 35% ХЛОПОК, 40% ПОЛИЭСТЕР\n- 180 ГР/М2\n- ОБЛЕГАЮЩИЙ КРОЙ\n- ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-longsleeve/1.PNG",
+      "/content/collections/remind/remind-longsleeve/2.PNG",
+      "/content/collections/remind/remind-longsleeve/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": true,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-005",
+    "slug": "remind-polo",
+    "name": "REMIND polo",
+    "price": 3499,
+    "currency": "₽",
+    "description": "- 100% ХЛОПОК \n- 180 ГР/М2\n -УКОРОЧЕННЫЙ КРОЙ\n - ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-polo/1.PNG",
+      "/content/collections/remind/remind-polo/2.PNG",
+      "/content/collections/remind/remind-polo/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-006",
+    "slug": "remind-skirt",
+    "name": "REMIND skirt",
+    "price": 5999,
+    "currency": "₽",
+    "description": "- 93% ХЛОПОК 7% ЭЛАСТАН\n- 310 ГР/М2\n- ОБЛЕГАЮЩИЙ КРОЙ\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/remind/remind-skirt/1.PNG",
+      "/content/collections/remind/remind-skirt/2.PNG",
+      "/content/collections/remind/remind-skirt/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-007",
+    "slug": "remind-striped-sweatshirt",
+    "name": "REMIND striped sweatshirt",
+    "price": 3299,
+    "currency": "₽",
+    "description": "- 80% ПОЛИЭСТЕР 20% ЭЛАСТАН\n- 320 ГР/М2\n- ОБЛЕГАЮЩИЙ КРОЙ\n- ВЯЗАННЫЙ ИТАЛЬЯНСКИЙ ДВУХСЛОЙНЫЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/2.PNG",
+      "/content/collections/remind/remind-striped-sweatshirt/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-008",
+    "slug": "remind-stripped-jeans",
+    "name": "REMIND stripped jeans",
+    "price": 5499,
+    "currency": "₽",
+    "description": "- 100% ХЛОПОК\n- ПЛОТНОСТЬ: 360 ГР/М2\n- REGULAR FIT\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/remind/remind-stripped-jeans/1.PNG",
+      "/content/collections/remind/remind-stripped-jeans/2.PNG",
+      "/content/collections/remind/remind-stripped-jeans/3.PNG"
+    ],
+    "collection": "remind",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-009",
+    "slug": "jacket-art",
+    "name": "jacket art",
+    "price": 18199,
+    "currency": "₽",
+    "description": "-unique material\n-YKK zippers\n-unusual cut\nОТПРАВКА В ТЕЧЕНИЕ 2-x НЕДЕЛЬ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/none/jacket-art/1.PNG",
+      "/content/collections/none/jacket-art/2.PNG",
+      "/content/collections/none/jacket-art/3.jpg",
+      "/content/collections/none/jacket-art/4.JPG",
+      "/content/collections/none/jacket-art/5.PNG"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-010",
+    "slug": "jacket-velvet",
+    "name": "jacket velvet",
+    "price": 13499,
+    "currency": "₽",
+    "description": "-100% ХЛОПОК\n-ПОДКЛАД 100% ВИСКАЗА\n-УКОРОЧЕННЫЙ КРОЙ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/none/jacket-velvet/1.png",
+      "/content/collections/none/jacket-velvet/2.png",
+      "/content/collections/none/jacket-velvet/3.JPG",
+      "/content/collections/none/jacket-velvet/4.PNG"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-011",
+    "slug": "leather-jacket",
+    "name": "leather jacket",
+    "price": 49600,
+    "currency": "₽",
+    "description": "-100% КОЖА\n-ИТАЛЬЯНСКАЯ КОЖА\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "/content/collections/none/leather-jacket/1.PNG",
+      "/content/collections/none/leather-jacket/2.jpg",
+      "/content/collections/none/leather-jacket/3.PNG",
+      "/content/collections/none/leather-jacket/4.jpg"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-012",
+    "slug": "t-shirt",
+    "name": "T-shirt",
+    "price": 3699,
+    "currency": "₽",
+    "description": "-100% ХЛОПОК\n-УКОРОЧЕННЫЙ КРОЙ\n-ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/none/t-shirt/1.PNG",
+      "/content/collections/none/t-shirt/2.PNG",
+      "/content/collections/none/t-shirt/3.PNG",
+      "/content/collections/none/t-shirt/IMG_3498%202.JPG"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-013",
+    "slug": "t-shirt-black",
+    "name": "t-shirt black",
+    "price": 3699,
+    "currency": "₽",
+    "description": "-100% ХЛОПОК\n-УКОРОЧЕННЫЙ КРОЙ\n-ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/none/t-shirt-black/1.PNG",
+      "/content/collections/none/t-shirt-black/2.PNG"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-014",
+    "slug": "trousers-is-gook",
+    "name": "trousers is-gook",
+    "price": 6799,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/none/trousers-is-gook/1.PNG",
+      "/content/collections/none/trousers-is-gook/2.PNG",
+      "/content/collections/none/trousers-is-gook/3.PNG",
+      "/content/collections/none/trousers-is-gook/4.PNG"
+    ],
+    "collection": "none",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-015",
+    "slug": "coat-cross",
+    "name": "coat cross",
+    "price": 11999,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/vl-pt2/coat-cross/1.png",
+      "/content/collections/vl-pt2/coat-cross/2.png",
+      "/content/collections/vl-pt2/coat-cross/3.jpg"
+    ],
+    "collection": "vl-pt2",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-016",
+    "slug": "jeans-vl",
+    "name": "JEANS VL",
+    "price": 5980,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/vl-pt2/jeans-vl/1.png",
+      "/content/collections/vl-pt2/jeans-vl/2.png"
+    ],
+    "collection": "vl-pt2",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-017",
+    "slug": "jeans-vl2",
+    "name": "jeans vl2",
+    "price": 5890,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/vl-pt2/jeans-vl2/1.png",
+      "/content/collections/vl-pt2/jeans-vl2/2.png"
+    ],
+    "collection": "vl-pt2",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-018",
+    "slug": "longsleeve-white",
+    "name": "longsleeve white",
+    "price": 3699,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/vl-pt2/longsleeve-white/1.png",
+      "/content/collections/vl-pt2/longsleeve-white/2.png"
+    ],
+    "collection": "vl-pt2",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-019",
+    "slug": "shirt-black",
+    "name": "shirt black",
+    "price": 6890,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/vl-pt2/shirt-black/1.png",
+      "/content/collections/vl-pt2/shirt-black/2.png",
+      "/content/collections/vl-pt2/shirt-black/3.jpeg"
+    ],
+    "collection": "vl-pt2",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-020",
+    "slug": "waves-sweatshirt",
+    "name": "waves sweatshirt",
+    "price": 3399,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_0671.PNG",
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_0673.PNG",
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_3935.JPG",
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_3937.JPG",
+      "/content/collections/ls-2-25/waves-sweatshirt/IMG_8668%202.JPG"
+    ],
+    "collection": "ls-2-25",
+    "featured": false,
+    "category": "одежда"
+  },
+  {
+    "id": "prod-021",
+    "slug": "waxzip-jeans",
+    "name": "waxzip jeans",
+    "price": 6899,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3924.PNG",
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3925.PNG",
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3926.PNG",
+      "/content/collections/ls-2-25/waxzip-jeans/IMG_3940.PNG"
+    ],
+    "collection": "ls-2-25",
+    "featured": false,
+    "category": "одежда"
+  }
+]
