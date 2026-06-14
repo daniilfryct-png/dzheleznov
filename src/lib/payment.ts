@@ -6,16 +6,6 @@ export const paymentOptions: PaymentOption[] = [
     name: "ЮKassa",
     description: "Оплата через платёжную систему ЮKassa",
   },
-  {
-    id: "sbp",
-    name: "СБП",
-    description: "Система быстрых платежей — оплата по QR-коду",
-  },
-  {
-    id: "card",
-    name: "Банковская карта",
-    description: "Visa, Mastercard, МИР",
-  },
 ];
 
 export interface YukassaIntegration {

@@ -8,20 +8,6 @@ export const deliveryOptions: DeliveryOption[] = [
     price: 450,
     estimatedDays: "3–7 дней",
   },
-  {
-    id: "pochta",
-    name: "Почта России",
-    description: "Доставка по всей России",
-    price: 350,
-    estimatedDays: "7–14 дней",
-  },
-  {
-    id: "pickup",
-    name: "Самовывоз",
-    description: "Шоурум D.ZHELEZNOV, Москва",
-    price: 0,
-    estimatedDays: "В день заказа",
-  },
 ];
 
 export const pickupPoints = [
