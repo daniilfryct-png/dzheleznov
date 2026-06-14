@@ -38,6 +38,8 @@ export async function POST(request: NextRequest) {
     }
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
+    console.log("BOT TOKEN:", !!botToken);
+    console.log("CHAT ID:", chatId);
     if (botToken && chatId) {
       const itemsText = items
         .map(
