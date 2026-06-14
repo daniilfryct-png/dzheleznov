@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export function PromoBar() {
-  const message = "Бесплатная доставка при заказе от 15 000 ₽ · Новая коллекция «Форма · Состояние» уже в каталоге";
+  const message = "Бесплатная доставка при заказе от 15 000 ₽ · Новая коллекция «SUMMER» уже в каталоге";
 
   return (
     <div className="bg-surface border-b border-border overflow-hidden">

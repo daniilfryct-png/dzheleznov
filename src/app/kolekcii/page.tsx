@@ -5,7 +5,7 @@ import { getCollections } from "@/lib/cms";
 
 export const metadata: Metadata = {
   title: "Коллекции",
-  description: "Коллекции модного дома D.ZHELEZNOV.",
+  description: "Коллекции D.ZHELEZNOV.",
 };
 
 const COLLECTION_ORDER = ["remind", "none", "vl-pt2", "ls-2-25"];

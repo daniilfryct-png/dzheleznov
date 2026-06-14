@@ -11,8 +11,7 @@ const shopLinks = [
 
 const infoLinks = [
   { href: "/o-brende", label: "О бренде" },
-  { href: "/kontakty", label: "Контакты" },
-  { href: "/kontakty", label: "Доставка и возврат" },
+  { href: "/kontakty", label: "Контакты,политика конфиденциальности" },
 ];
 
 export function Footer() {
@@ -28,13 +27,13 @@ export function Footer() {
               D.ZHELEZNOV
             </Link>
             <p className="text-sm text-muted mt-4 max-w-xs leading-relaxed">
-              Независимый модный дом. Форма создаёт состояние.
+              Дизайнер.
             </p>
             <div className="flex gap-4 mt-6">
-              <a href="https://t.me/dzheleznov" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
+              <a href="https://t.me/willyouhearme" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
                 Telegram
               </a>
-              <a href="https://instagram.com/dzheleznov" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
+              <a href="https://www.instagram.com/d.zheleznov_?igsh=cDM5amc3dDg5czRj&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
                 Instagram
               </a>
             </div>
@@ -66,9 +65,9 @@ export function Footer() {
             </ul>
             <div className="mt-6 text-sm text-muted space-y-1">
               <p>
-                <a href="mailto:studio@dzheleznov.com" className="hover:text-text">studio@dzheleznov.com</a>
+                <a href="mailto:info@d-zheleznov.ru" className="hover:text-text">info@d-zheleznov.ru</a>
               </p>
-              <p>+7 (495) 123-45-67</p>
+              <p>+7 (966) 059-82-68</p>
             </div>
           </div>
 
