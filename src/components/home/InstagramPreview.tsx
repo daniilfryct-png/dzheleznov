@@ -12,13 +12,13 @@ export function InstagramPreview() {
             <h2 className="section-title">Instagram</h2>
             <p className="section-subtitle mt-1">@dzheleznov</p>
           </div>
-          <a href="https://instagram.com/dzheleznov" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
+          <a href="https://instagram.com/d.zheleznov_" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
             Подписаться →
           </a>
         </div>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1 md:gap-2">
           {posts.map((item) => (
-            <a key={item.id} href="https://instagram.com/dzheleznov" target="_blank" rel="noopener noreferrer" className="relative aspect-square overflow-hidden bg-white group">
+            <a key={item.id} href="https://instagram.com/d.zheleznov_" target="_blank" rel="noopener noreferrer" className="relative aspect-square overflow-hidden bg-white group">
               <Image src={item.image} alt={item.title} fill sizes="16vw" className="object-contain group-hover:scale-[1.02] transition-transform duration-500" quality={85} />
             </a>
           ))}

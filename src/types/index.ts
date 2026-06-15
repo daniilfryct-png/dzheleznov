@@ -95,6 +95,7 @@ export interface CheckoutForm {
   name: string;
   phone: string;
   email: string;
+  city?: string;
   deliveryMethod: DeliveryMethod;
   paymentMethod: PaymentMethod;
   pickupPoint?: string;

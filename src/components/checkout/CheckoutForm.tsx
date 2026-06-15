@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ProductCardImage } from "@/components/store/ProductCardImage";
 import { useCart } from "@/contexts/CartContext";
 import { formatPrice, cn } from "@/lib/utils";
-import { deliveryOptions, pickupPoints } from "@/lib/delivery";
+import { deliveryOptions } from "@/lib/delivery";
 import { paymentOptions } from "@/lib/payment";
 import type { DeliveryMethod, PaymentMethod } from "@/types";
 
@@ -14,15 +14,43 @@ export function CheckoutForm() {
   const { items, total, clearCart } = useCart();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [cdekPoints, setCdekPoints] = useState<any[]>([]);
   const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
+    city: "",
     deliveryMethod: "sdek" as DeliveryMethod,
     paymentMethod: "yukassa" as PaymentMethod,
     pickupPoint: "",
     address: "",
   });
+useEffect(() => {
+  async function loadPvz() {
+    if (!form.city || form.city.length < 2) {
+      setCdekPoints([]);
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        `/api/cdek/pvz?city=${encodeURIComponent(form.city)}`
+      );
+
+      const data = await res.json();
+
+      if (Array.isArray(data)) {
+        setCdekPoints(data);
+      }
+    } catch (e) {
+      console.error("Ошибка загрузки ПВЗ", e);
+    }
+  }
+
+  const timeout = setTimeout(loadPvz, 500);
+
+  return () => clearTimeout(timeout);
+}, [form.city]);
 
   const delivery = deliveryOptions.find((d) => d.id === form.deliveryMethod);
   const orderTotal = total + (delivery?.price ?? 0);
@@ -40,6 +68,12 @@ export function CheckoutForm() {
       const data = await res.json();
       if (data.success) {
         clearCart();
+
+        if (data.paymentUrl) {
+          window.location.href = data.paymentUrl;
+          return;
+        }
+        
         router.push(`/oplata/uspeh?order=${data.orderId}`);
       } else {
         setError(data.error ?? "Не удалось оформить заказ");
@@ -86,14 +120,33 @@ export function CheckoutForm() {
               </label>
             ))}
           </div>
-          {form.deliveryMethod === "pickup" && (
+          {form.deliveryMethod === "sdek" && (
+            <>
+            <input type="text" placeholder="Введите город" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} className="input-field mt-3" />
+
             <select value={form.pickupPoint} onChange={(e) => setForm({ ...form, pickupPoint: e.target.value })} required className="input-field mt-3">
               <option value="">Выберите пункт</option>
-              {pickupPoints.map((p) => <option key={p.id} value={p.id}>{p.name} — {p.address}</option>)}
+              {cdekPoints.map((p) => 
+                <option 
+                  key={p.code}
+                  value={p.code}
+                >
+                  {p.location?.address_full || p.address}
+                </option>)}
             </select>
+            </>
           )}
-          {(form.deliveryMethod === "sdek" || form.deliveryMethod === "pochta") && (
-            <input type="text" placeholder="Адрес доставки" required value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} className="input-field mt-3" />
+          {form.deliveryMethod === "pochta" && (
+            <input
+              type="text"
+              placeholder="Адрес доставки"
+              required
+              value={form.address}
+              onChange={(e) =>
+                setForm({ ...form, address: e.target.value })
+              }
+              className="input-field mt-3"
+            />
           )}
         </section>
 
