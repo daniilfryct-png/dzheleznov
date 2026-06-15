@@ -15,7 +15,7 @@ export function CollectionBanners({ collections }: { collections: Collection[] }
         <h2 className="section-title mb-6">Коллекции</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {sorted.map((col) => (
-            <Link key={col.id} href={`/kolekcii/${col.slug}`} className="group relative aspect-[4/5] overflow-hidden bg-white">
+            <Link key={col.id} href={`/kolekcii/${col.slug}`} className="group relative aspect-[3/2] overflow-hidden bg-white">
               <Image
                 src={col.coverImage}
                 alt={col.title}
