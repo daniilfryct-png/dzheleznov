@@ -509,5 +509,27 @@
     "collection": "ls-2-25",
     "featured": false,
     "category": "одежда"
+  },
+  {
+    "id": "prod-022",
+    "slug": "stas",
+    "name": "stas",
+    "price": 10000,
+    "currency": "₽",
+    "description": "Описание будет добавлено.",
+    "fabric": "",
+    "construction": "",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "images": [
+      "/content/collections/summer/stas.jpeg"
+    ],
+    "collection": "summer",
+    "featured": false,
+    "category": "одежда"
   }
 ]
