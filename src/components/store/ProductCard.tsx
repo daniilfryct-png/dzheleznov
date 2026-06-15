@@ -23,6 +23,7 @@ interface ProductCardProps {
 export function ProductCard({ product, index = 0, compact = false, onNavigate }: ProductCardProps) {
   const [hovered, setHovered] = useState(false);
   const [quickOpen, setQuickOpen] = useState(false);
+  const [mobileActions, setMobileActions] = useState(false);
   const { addItem } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
   const sizes = getOrderedSizes(product);
@@ -50,7 +51,14 @@ export function ProductCard({ product, index = 0, compact = false, onNavigate }:
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div className="relative mb-4 border border-border/60 overflow-hidden">
+        <div
+          className="relative mb-4 border border-border/60 overflow-hidden"
+          onClick={() => {
+            if (window.innerWidth < 768) {
+              setMobileActions((prev) => !prev);
+            }
+          }}
+        >
           <Link href={`/katalog/${product.slug}`} className="block" onClick={() => onNavigate?.()}>
             <ProductCardImage
               src={hasImages ? product.images[0] : undefined}
@@ -83,8 +91,12 @@ export function ProductCard({ product, index = 0, compact = false, onNavigate }:
             <div
               className={cn(
                 "absolute bottom-0 inset-x-0 p-1.5 sm:p-2 btn-row transition-all duration-300 z-10",
-                "opacity-100 translate-y-0",
-                "md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                mobileActions
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-2 pointer-events-none",
+                "md:pointer-events-auto",
+                "md:opacity-0 md:translate-y-2",
+                "md:group-hover:opacity-100 md:group-hover:translate-y-0"
               )}
             >
               <button
