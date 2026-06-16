@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   return NextResponse.json({
@@ -21,7 +22,16 @@ export async function POST(request: NextRequest) {
 
     if (event === "payment.succeeded") {
       const orderId = payment.metadata?.order_id;
-
+      if (orderId) {
+        await prisma.order.update({
+          where: {
+            id: orderId,
+          },
+          data: {
+            paymentStatus: "paid",
+          },
+        });
+      }
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
       const chatId = process.env.TELEGRAM_CHAT_ID;
 
