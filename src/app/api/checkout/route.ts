@@ -40,6 +40,7 @@ export async function POST(request: NextRequest) {
         },
         },
       });
+      console.log("ORDER SAVED", orderId);
     let paymentUrl: string | undefined;
     if (form.paymentMethod === "yukassa" || form.paymentMethod === "card") {
       const payment = await yukassaIntegration.createPayment({
