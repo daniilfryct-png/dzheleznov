@@ -1,3 +1,4 @@
+import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import { generateOrderId } from "@/lib/utils";
 import { yukassaIntegration, sbpIntegration } from "@/lib/payment";
@@ -18,6 +19,17 @@ export async function POST(request: NextRequest) {
       );
     }
     const orderId = generateOrderId();
+    await prisma.order.create({
+      data: {
+        id: orderId,
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        city: form.city || null,
+        pickupPoint: form.pickupPoint || null,
+        amount: total,
+      },
+    });
     let paymentUrl: string | undefined;
     if (form.paymentMethod === "yukassa" || form.paymentMethod === "card") {
       const payment = await yukassaIntegration.createPayment({
@@ -85,7 +97,10 @@ ${itemsText}
   } catch (error) {
     console.error(error);
     return NextResponse.json(
-      { success: false, error: "Ошибка обработки заказа" },
+      { 
+        success: false, 
+        error: String(error),
+      },
       { status: 500 }
     );
   }
