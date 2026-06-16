@@ -19,6 +19,7 @@ export async function POST(request: NextRequest) {
       );
     }
     const orderId = generateOrderId();
+    console.log("ITEMS:", JSON.stringify(items, null, 2));
     await prisma.order.create({
       data: {
         id: orderId,
@@ -29,8 +30,16 @@ export async function POST(request: NextRequest) {
         pickupPoint: form.pickupPoint || null,
         amount: total,
         paymentStatus: "pending",
-      }, 
-    });
+        items: {
+          create: items.map((item) => ({
+            name: item.product.name,
+            size: item.size,
+            quantity: item.quantity,
+            price: item.product.price
+          })), 
+        },
+        },
+      });
     let paymentUrl: string | undefined;
     if (form.paymentMethod === "yukassa" || form.paymentMethod === "card") {
       const payment = await yukassaIntegration.createPayment({
