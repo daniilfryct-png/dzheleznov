@@ -1,39 +1,39 @@
 generator client {
-provider = “prisma-client-js”
+  provider = "prisma-client-js"
 }
 
 datasource db {
-provider = “postgresql”
-url      = env(“DATABASE_URL”)
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Order {
-id             String      @id
-name           String
-phone          String
-email          String
+  id    String @id
+  name  String
+  phone String
+  email String
 
-city           String?
-pickupPoint    String?
-pickupAddress  String?
+  city          String?
+  pickupPoint   String?
+  pickupAddress String?
 
-amount         Float
-paymentStatus  String      @default(“pending”)
+  amount        Float
+  paymentStatus String @default("pending")
 
-createdAt      DateTime    @default(now())
+  createdAt DateTime @default(now())
 
-items          OrderItem[]
+  items OrderItem[]
 }
 
 model OrderItem {
-id        Int      @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-orderId   String
+  orderId String
 
-name      String
-size      String
-quantity  Int
-price     Float
+  name     String
+  size     String
+  quantity Int
+  price    Float
 
-order     Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
 }
