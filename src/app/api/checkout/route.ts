@@ -61,19 +61,26 @@ export async function POST(request: NextRequest) {
         )
         .join("\n");
       const text = `
-🛒 Новый заказ
+🛒 НОВЫЙ ЗАКАЗ
 
 🟡 СТАТУС: ОЖИДАЕТ ОПЛАТЫ
 
-№ ${orderId}
+🆔 Заказ: ${orderId}
 👤 Имя: ${form.name}
 📞 Телефон: ${form.phone}
 📧 Email: ${form.email}
-🚚 Доставка: ${form.deliveryMethod}
-📍 Адрес: ${form.address || form.pickupPoint || "-"}
-💳 Оплата: ${form.paymentMethod}
+🏙 Город: ${form.city || "-"}
+🚚 Способ доставки: ${form.deliveryMethod}
+📦 ПВЗ СДЭК:
+${form.pickupPoint || "-"}
+📍 Адрес:
+${form.address || "-"}
+💳 Способ оплаты:
+${form.paymentMethod}
+━━━━━━━━━━━━━━━
 ${itemsText}
-💰 Итого: ${total} ₽
+━━━━━━━━━━━━━━━
+💰 ИТОГО: ${total} ₽
 `;
       await fetch(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
