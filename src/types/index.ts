@@ -99,6 +99,7 @@ export interface CheckoutForm {
   deliveryMethod: DeliveryMethod;
   paymentMethod: PaymentMethod;
   pickupPoint?: string;
+  pickupAddress?: string;
   address?: string;
 }
 

@@ -23,6 +23,7 @@ export function CheckoutForm() {
     deliveryMethod: "sdek" as DeliveryMethod,
     paymentMethod: "yukassa" as PaymentMethod,
     pickupPoint: "",
+    pickupAddress: "",
     address: "",
   });
 useEffect(() => {
@@ -123,7 +124,24 @@ useEffect(() => {
             <>
             <input type="text" placeholder="Введите город" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} className="input-field mt-3" />
 
-            <select value={form.pickupPoint} onChange={(e) => setForm({ ...form, pickupPoint: e.target.value })} required className="input-field mt-3">
+            <select
+              value={form.pickupPoint}
+              onChange={(e) => {
+                const selected = cdekPoints.find(
+                  (p) => p.code === e.target.value
+                );
+                setForm({
+                  ...form,
+                 pickupPoint: e.target.value,
+                 pickupAddress:
+                   selected?.location?.address_full ||
+                   selected?.address ||
+                   "",
+                });
+               }}
+               required 
+               className="input-field mt-3"
+            >
               <option value="">Выберите пункт</option>
               {cdekPoints.map((p) => 
                 <option 
