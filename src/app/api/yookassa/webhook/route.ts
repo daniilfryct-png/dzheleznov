@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export async function GET() {
+  return NextResponse.json({
+    status: "ok",
+    webhook: "yookassa",
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
