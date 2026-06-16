@@ -67,13 +67,12 @@ useEffect(() => {
       });
       const data = await res.json();
       if (data.success) {
-        clearCart();
 
         if (data.paymentUrl) {
           window.location.href = data.paymentUrl;
           return;
         }
-        
+
         router.push(`/oplata/uspeh?order=${data.orderId}`);
       } else {
         setError(data.error ?? "Не удалось оформить заказ");
