@@ -11,16 +11,16 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    console.log("=================================");
-    console.log("YOOKASSA WEBHOOK RECEIVED");
-    console.log(JSON.stringify(body, null, 2));
-    console.log("=================================");
+    console.log(
+      "YOOKASSA WEBHOOK:",
+      JSON.stringify(body, null, 2)
+    );
 
     return NextResponse.json({
       received: true,
     });
   } catch (error) {
-    console.error("WEBHOOK ERROR:", error);
+    console.error(error);
 
     return NextResponse.json(
       { error: "Webhook error" },
