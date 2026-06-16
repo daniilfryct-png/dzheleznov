@@ -16,11 +16,44 @@ export async function POST(request: NextRequest) {
       JSON.stringify(body, null, 2)
     );
 
+    const event = body.event;
+    const payment = body.object;
+
+    if (event === "payment.succeeded") {
+      const orderId = payment.metadata?.order_id;
+
+      const botToken = process.env.TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.TELEGRAM_CHAT_ID;
+
+      if (botToken && chatId) {
+        await fetch(
+          `https://api.telegram.org/bot${botToken}/sendMessage`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: `🟢 ЗАКАЗ ОПЛАЧЕН
+
+№ ${orderId}
+
+💰 Сумма: ${payment.amount.value} ₽
+
+🧾 Payment ID:
+${payment.id}`,
+            }),
+          }
+        );
+      }
+    }
+
     return NextResponse.json({
       received: true,
     });
   } catch (error) {
-    console.error(error);
+    console.error("WEBHOOK ERROR:", error);
 
     return NextResponse.json(
       { error: "Webhook error" },
