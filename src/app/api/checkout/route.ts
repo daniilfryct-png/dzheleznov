@@ -49,6 +49,9 @@ export async function POST(request: NextRequest) {
         .join("\n");
       const text = `
 🛒 Новый заказ
+
+🟡 СТАТУС: ОЖИДАЕТ ОПЛАТЫ
+
 № ${orderId}
 👤 Имя: ${form.name}
 📞 Телефон: ${form.phone}
