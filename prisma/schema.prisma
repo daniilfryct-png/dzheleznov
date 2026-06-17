@@ -19,6 +19,8 @@ model Order {
 
   amount        Float
   paymentStatus String @default("pending")
+  cdekOrderId   String?
+  trackingNumber String?
 
   createdAt DateTime @default(now())
 
