@@ -29,4 +29,11 @@ export async function getCdekToken() {
   }
 
   return data.access_token;
+  }
+export async function createCdekOrder() {
+  const token = await getCdekToken();
+
+  console.log("CDEK TOKEN OK");
+
+  return token;
 }
