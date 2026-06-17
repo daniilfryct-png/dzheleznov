@@ -19,8 +19,17 @@ export async function POST(request: NextRequest) {
       );
     }
     const orderId = generateOrderId();
+    const orderItemsData = items.map((item) => ({
+      name: item.product.name,
+      size: item.size,
+      quantity: item.quantity,
+      price: item.product.price,
+    }));
+
     console.log("ITEMS:", JSON.stringify(items, null, 2));
-    await prisma.order.create({
+    console.log("ORDER ITEMS DATA:", JSON.stringify(orderItemsData, null, 2));
+
+    const order = await prisma.order.create({
       data: {
         id: orderId,
         name: form.name,
@@ -28,19 +37,23 @@ export async function POST(request: NextRequest) {
         email: form.email,
         city: form.city || null,
         pickupPoint: form.pickupPoint || null,
+        pickupAddress: form.pickupAddress || form.address || null,
         amount: total,
         paymentStatus: "pending",
         items: {
-          create: items.map((item) => ({
-            name: item.product.name,
-            size: item.size,
-            quantity: item.quantity,
-            price: item.product.price
-          })), 
+          create: orderItemsData,
         },
-        },
-      });
-      console.log("ORDER SAVED", orderId);
+      },
+      include: { items: true },
+    });
+
+    console.log(
+      "ORDER SAVED",
+      orderId,
+      "itemsCreated:",
+      order.items.length,
+      JSON.stringify(order.items)
+    );
     let paymentUrl: string | undefined;
     if (form.paymentMethod === "yukassa" || form.paymentMethod === "card") {
       const payment = await yukassaIntegration.createPayment({
