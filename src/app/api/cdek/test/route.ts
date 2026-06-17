@@ -5,7 +5,7 @@ export async function GET() {
   const token = await getCdekToken();
 
   const response = await fetch(
-    "https://api.cdek.ru/v2/location/cities?city=Электросталь",
+    "https://api.cdek.ru/v2/location/cities?city=Москва",
     {
       headers: {
         Authorization: `Bearer ${token}`,
