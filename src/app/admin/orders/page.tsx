@@ -147,6 +147,13 @@ return (
               <p>Адрес: {order.pickupAddress || "-"}</p>
 
               <p>
+                СДЭК UUID:{" "}
+                <span className="font-mono text-sm">
+                  {order.cdekOrderId || "-"}
+                </span>
+              </p>
+
+              <p>
                 Дата:{" "}
                 {new Date(order.createdAt).toLocaleString("ru-RU")}
               </p>
