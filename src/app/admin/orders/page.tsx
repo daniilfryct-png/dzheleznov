@@ -27,12 +27,54 @@ export default async function OrdersPage({
       items: true,
     },
   });
+  const totalRevenue = orders.reduce(
+    (sum, order) => sum + order.amount,
+    0
+  );
+
+  const paidOrders = orders.filter(
+    (order) => order.paymentStatus === "paid"
+  ).length;
+
+  const averageOrder =
+    orders.length > 0
+      ? Math.round(totalRevenue / orders.length)
+      : 0;
 
   return (
     <main className="max-w-6xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-8">
         Заказы ({orders.length})
       </h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="border p-4 rounded">
+          <p className="text-sm text-gray-500">Заказов</p>
+          <p className="text-2xl font-bold">
+            {orders.length}
+          </p>
+       </div>
+
+       <div className="border p-4 rounded">
+         <p className="text-sm text-gray-500">Оплачено</p>
+         <p className="text-2xl font-bold text-green-600">
+           {paidOrders}
+         </p>
+       </div>
+
+       <div className="border p-4 rounded">
+         <p className="text-sm text-gray-500">Выручка</p>
+         <p className="text-2xl font-bold">
+           {totalRevenue.toLocaleString("ru-RU")} ₽
+         </p>
+       </div>
+
+       <div className="border p-4 rounded">
+        <p className="text-sm text-gray-500">Средний чек</p>
+        <p className="text-2xl font-bold">
+          {averageOrder.toLocaleString("ru-RU")} ₽
+        </p>
+       </div>
+     </div>
 
       <div className="space-y-6">
         {orders.map((order) => (
