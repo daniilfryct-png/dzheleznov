@@ -5,10 +5,7 @@ export async function GET() {
   try {
     const result = await createCdekOrder();
 
-    return NextResponse.json({
-      success: true,
-      tokenExists: !!result,
-    });
+    return NextResponse.json(result);
   } catch (error) {
     return NextResponse.json(
       {

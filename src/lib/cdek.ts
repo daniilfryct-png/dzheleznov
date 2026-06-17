@@ -33,7 +33,48 @@ export async function getCdekToken() {
 export async function createCdekOrder() {
   const token = await getCdekToken();
 
-  console.log("CDEK TOKEN OK");
+  const response = await fetch(`${CDEK_API}/orders`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      number: `DZ-${Date.now()}`,
 
-  return token;
+      tariff_code: 136,
+
+      shipment_point: "ELT2",
+
+      delivery_point: "MSK103",
+
+      recipient: {
+        name: "Тестовый клиент",
+        phones: [
+          {
+            number: "+79999999999",
+          },
+        ],
+      },
+
+      packages: [
+        {
+          number: `PKG-${Date.now()}`,
+          weight: 1000,
+          length: 40,
+          width: 30,
+          height: 10,
+        },
+      ],
+    }),
+  });
+
+  const data = await response.json();
+
+  console.log(
+    "CDEK ORDER RESPONSE:",
+    JSON.stringify(data, null, 2)
+  );
+
+  return data;
 }
