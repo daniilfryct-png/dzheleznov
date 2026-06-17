@@ -15,6 +15,36 @@ export async function GET(request: NextRequest) {
 
     const token = await getCdekToken();
 
+    // Получаем данные выбранного ПВЗ
+    const pvzResponse = await fetch(
+      `https://api.cdek.ru/v2/deliverypoints?code=${code}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    const pvzData = await pvzResponse.json();
+
+    if (!Array.isArray(pvzData) || !pvzData.length) {
+      return NextResponse.json(
+        { error: "PVZ not found" },
+        { status: 404 }
+      );
+    }
+
+    const cityCode =
+      pvzData[0]?.location?.city_code;
+
+    if (!cityCode) {
+      return NextResponse.json(
+        { error: "City code not found" },
+        { status: 400 }
+      );
+    }
+
+    // Считаем доставку до города выбранного ПВЗ
     const response = await fetch(
       "https://api.cdek.ru/v2/calculator/tarifflist",
       {
@@ -25,12 +55,15 @@ export async function GET(request: NextRequest) {
         },
         body: JSON.stringify({
           from_location: {
-            code: 168,
+            code: 168, // Электросталь
           },
+
           to_location: {
-            code: 44,
+            code: cityCode,
           },
+
           tariff_codes: [136],
+
           packages: [
             {
               weight: 1000,
