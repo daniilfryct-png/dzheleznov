@@ -5,11 +5,36 @@ export async function GET() {
   try {
     const token = await getCdekToken();
 
-    return NextResponse.json({
-      success: true,
-      tokenExists: !!token,
-      tokenStart: token.slice(0, 20),
-    });
+    const response = await fetch(
+      "https://api.cdek.ru/v2/calculator/tarifflist",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from_location: {
+            city: "Электросталь",
+          },
+          to_location: {
+            city: "Москва",
+          },
+          packages: [
+            {
+              weight: 1000,
+              length: 40,
+              width: 30,
+              height: 10,
+            },
+          ],
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
       {
