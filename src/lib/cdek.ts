@@ -64,8 +64,21 @@ export async function createCdekOrder() {
           length: 40,
           width: 30,
           height: 10,
+
+          items: [
+            {
+              name: "REMIND hoodie",
+              ware_key: "remind-hoodie",
+              cost: 5999,
+              weight: 1000,
+              amount: 1,
+              payment: {
+                value: 0,
+              },
+            },
+          ],
         },
-      ],
+      ]
     }),
   });
 
