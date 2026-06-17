@@ -61,6 +61,28 @@ return (
       <h1 className="text-3xl font-bold mb-8">
         Заказы ({orders.length})
       </h1>
+      <form className="mb-6">
+        <input
+          type="text"
+          name="search"
+          defaultValue={params.search || ""}
+          placeholder="Поиск по заказу, имени, телефону..."
+          className="border p-3 rounded w-full"
+        />
+
+        <input
+          type="hidden"
+          name="password"
+          value={params.password || ""}
+        />
+
+        <button
+          type="submit"
+          className="mt-2 border px-4 py-2 rounded"
+        >
+          Найти
+        </button>
+      </form>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <div className="border p-4 rounded">
           <p className="text-sm text-gray-500">Заказов</p>
@@ -92,7 +114,7 @@ return (
      </div>
 
       <div className="space-y-6">
-        {orders.map((order) => (
+        {filteredOrders.map((order) => (
           <div
             key={order.id}
             className="border border-gray-300 p-6 rounded"
