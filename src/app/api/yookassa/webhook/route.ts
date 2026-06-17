@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { createCdekOrder } from "@/lib/cdek";
 
 export async function GET() {
   return NextResponse.json({
@@ -22,6 +23,7 @@ export async function POST(request: NextRequest) {
 
     if (event === "payment.succeeded") {
       const orderId = payment.metadata?.order_id;
+
       if (orderId) {
         await prisma.order.update({
           where: {
@@ -31,7 +33,35 @@ export async function POST(request: NextRequest) {
             paymentStatus: "paid",
           },
         });
+
+        const order = await prisma.order.findUnique({
+          where: {
+            id: orderId,
+          },
+        });
+
+        if (order && order.pickupPoint) {
+          try {
+            const cdekResult = await createCdekOrder({
+              id: order.id,
+              name: order.name,
+              phone: order.phone,
+              pickupPoint: order.pickupPoint,
+            });
+
+            console.log(
+              "CDEK CREATED:",
+              JSON.stringify(cdekResult, null, 2)
+            );
+          } catch (cdekError) {
+            console.error(
+              "CDEK CREATE ERROR:",
+              cdekError
+            );
+          }
+        }
       }
+
       const botToken = process.env.TELEGRAM_BOT_TOKEN;
       const chatId = process.env.TELEGRAM_CHAT_ID;
 
@@ -66,8 +96,12 @@ ${payment.id}`,
     console.error("WEBHOOK ERROR:", error);
 
     return NextResponse.json(
-      { error: "Webhook error" },
-      { status: 500 }
+      {
+        error: "Webhook error",
+      },
+      {
+        status: 500,
+      }
     );
   }
 }
