@@ -3,9 +3,13 @@ import { prisma } from "@/lib/prisma";
 export default async function OrdersPage({
   searchParams,
 }: {
-  searchParams: Promise<{ password?: string }>;
+  searchParams: Promise<{ 
+    password?: string;
+    search?: string;
+  }>;
 }) {
   const params = await searchParams;
+  const search = params.search?.toLowerCase() || "";
 
   if (params.password !== process.env.ADMIN_PASSWORD) {
     return (
@@ -40,8 +44,19 @@ export default async function OrdersPage({
     orders.length > 0
       ? Math.round(totalRevenue / orders.length)
       : 0;
+  const filteredOrders = orders.filter((order) => {
+    if (!search) return true;
 
-  return (
+    return (
+      order.id.toLowerCase().includes(search) ||
+      order.name.toLowerCase().includes(search) ||
+      order.phone.toLowerCase().includes(search) ||
+      order.email.toLowerCase().includes(search)
+    );
+  });
+
+return (
+
     <main className="max-w-6xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-8">
         Заказы ({orders.length})
