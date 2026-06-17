@@ -1,6 +1,24 @@
 import { prisma } from "@/lib/prisma";
 
-export default async function OrdersPage() {
+export default async function OrdersPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ password?: string }>;
+}) {
+  const params = await searchParams;
+
+  if (params.password !== process.env.ADMIN_PASSWORD) {
+    return (
+      <main className="max-w-md mx-auto p-8">
+        <h1 className="text-2xl font-bold mb-4">
+          Доступ запрещён
+        </h1>
+
+        <p>Неверный пароль.</p>
+      </main>
+    );
+  }
+
   const orders = await prisma.order.findMany({
     orderBy: {
       createdAt: "desc",
