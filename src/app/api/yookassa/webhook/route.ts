@@ -49,6 +49,17 @@ export async function POST(request: NextRequest) {
               pickupPoint: order.pickupPoint,
             });
 
+            if (cdekResult?.entity?.uuid) {
+              await prisma.order.update({
+                where: {
+                  id: order.id,
+                },
+                data: {
+                  cdekOrderId: cdekResult.entity.uuid,
+                },
+              });
+            }
+
             console.log(
               "CDEK CREATED:",
               JSON.stringify(cdekResult, null, 2)
