@@ -45,7 +45,18 @@ export default async function OrdersPage({
                 {order.id}
               </h2>
 
-              <p>Статус: {order.paymentStatus}</p>
+              <p>
+                Статус:{" "}
+                <span
+                  className={
+                    order.paymentStatus === "paid"
+                      ? "text-green-600 font-bold"
+                      : "text-yellow-600 font-bold"
+                  }
+                >
+                  {order.paymentStatus}
+                </span>
+              </p>
               <p>Сумма: {order.amount} ₽</p>
 
               <p>Имя: {order.name}</p>
