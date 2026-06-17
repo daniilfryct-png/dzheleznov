@@ -3,7 +3,8 @@ import { getCdekToken } from "@/lib/cdek";
 
 export async function GET(request: NextRequest) {
   try {
-    const code = request.nextUrl.searchParams.get("code");
+    const code =
+      request.nextUrl.searchParams.get("code");
 
     if (!code) {
       return NextResponse.json(
@@ -26,11 +27,10 @@ export async function GET(request: NextRequest) {
           from_location: {
             code: 168,
           },
-
           to_location: {
             code: 44,
           },
-
+          tariff_codes: [136],
           packages: [
             {
               weight: 1000,
@@ -48,8 +48,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(
-      { error: String(error) },
-      { status: 500 }
+      {
+        error: String(error),
+      },
+      {
+        status: 500,
+      }
     );
   }
 }

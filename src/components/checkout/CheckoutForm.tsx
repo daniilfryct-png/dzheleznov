@@ -15,6 +15,7 @@ export function CheckoutForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [cdekPoints, setCdekPoints] = useState<any[]>([]);
+  const [deliveryPrice, setDeliveryPrice] = useState(450);
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -52,9 +53,35 @@ useEffect(() => {
 
   return () => clearTimeout(timeout);
 }, [form.city]);
+useEffect(() => {
+  async function calculateDelivery() {
+    if (!form.pickupPoint) return;
+
+    try {
+      const res = await fetch(
+        `/api/cdek/calculate?code=${form.pickupPoint}`
+      );
+
+      const data = await res.json();
+
+      const tariff = data.tariff_codes?.find(
+        (t: any) => t.tariff_code === 136
+      );
+
+      if (tariff) {
+        setDeliveryPrice(tariff.delivery_sum);
+      }
+    } catch (error) {
+      console.error("Ошибка расчёта доставки:", error);
+    }
+  }
+
+  calculateDelivery();
+}, [form.pickupPoint]);
+
 
   const delivery = deliveryOptions.find((d) => d.id === form.deliveryMethod);
-  const orderTotal = total + (delivery?.price ?? 0);
+  const orderTotal = total + deliveryPrice;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -209,7 +236,7 @@ useEffect(() => {
           <div className="border-t border-border pt-4 space-y-2 text-sm">
             <div className="flex justify-between text-muted">
               <span>Доставка</span>
-              <span>{delivery?.price === 0 ? "Бесплатно" : formatPrice(delivery?.price ?? 0)}</span>
+              <span>{formatPrice(deliveryPrice)}</span>
             </div>
             <div className="flex justify-between font-medium text-base pt-2">
               <span>Итого</span>
