@@ -99,3 +99,17 @@ export async function createCdekOrder(order: {
 
   return data;
 }
+export async function getCdekOrder(uuid: string) {
+  const token = await getCdekToken();
+
+  const response = await fetch(
+    `${CDEK_API}/orders/${uuid}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  return response.json();
+}
