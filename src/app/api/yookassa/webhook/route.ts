@@ -78,6 +78,10 @@ export async function POST(request: NextRequest) {
               const cdekOrder = await getCdekOrder(
                 cdekResult.entity.uuid
               );
+              console.log(
+                "CDEK ORDER FULL:",
+                JSON.stringify(cdekOrder, null, 2)
+              );
 
               await prisma.order.update({
                 where: {
