@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { createCdekOrder } from "@/lib/cdek";
+import { sendOrderEmail } from "@/lib/mail";
 
 export async function GET() {
   return NextResponse.json({
@@ -39,6 +40,25 @@ export async function POST(request: NextRequest) {
             id: orderId,
           },
         });
+
+        if (order?.email) {
+          try {
+            await sendOrderEmail(
+              order.email,
+              order.id
+            );
+
+            console.log(
+              "EMAIL SENT:",
+              order.email
+            );
+          } catch (emailError) {
+            console.error(
+              "EMAIL ERROR:",
+              emailError
+            );
+          }
+        }
 
         if (order && order.pickupPoint) {
           try {
