@@ -90,8 +90,13 @@ export async function POST(request: NextRequest) {
             }
 
             console.log(
-              "TRACKING:",
-              JSON.stringify(cdekResult, null, 2)
+              "CDEK ORDER:",
+              JSON.stringify(cdekOrder, null, 2)
+            );
+
+            console.log(
+              "TRACKING NUMBER:",
+              cdekOrder?.entity?.cdek_number
             );
           } catch (cdekError) {
             console.error(
