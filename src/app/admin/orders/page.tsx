@@ -152,6 +152,13 @@ return (
                   {order.cdekOrderId || "-"}
                 </span>
               </p>
+              <p>
+                Трек-номер:{" "}
+                <span className="font-mono text-sm">
+                  {order.trackingNumber || "-"}
+                </span>
+              </p>
+              
 
               <p>
                 Дата:{" "}

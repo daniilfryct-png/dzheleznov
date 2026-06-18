@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
             }
 
             console.log(
-              "CDEK CREATED:",
+              "TRACKING:",
               JSON.stringify(cdekResult, null, 2)
             );
           } catch (cdekError) {
