@@ -75,6 +75,9 @@ export async function POST(request: NextRequest) {
             });
 
             if (cdekResult?.entity?.uuid) {
+              await new Promise((resolve) =>
+                setTimeout(resolve, 3000)
+              );  
               const cdekOrder = await getCdekOrder(
                 cdekResult.entity.uuid
               );
