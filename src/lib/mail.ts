@@ -33,3 +33,35 @@ export async function sendOrderEmail(
     `,
   });
 }
+
+export async function sendTrackingEmail(
+  email: string,
+  orderId: string,
+  trackingNumber: string
+) {
+  await transporter.sendMail({
+    from: `"D.ZHELEZNOV" <${process.env.SMTP_USER}>`,
+    to: email,
+    subject: `Заказ ${orderId} передан в СДЭК`,
+    html: `
+      <h2>Ваш заказ передан в СДЭК</h2>
+
+      <p>Номер заказа: <b>${orderId}</b></p>
+
+      <p>
+        Трек-номер СДЭК:
+        <b>${trackingNumber}</b>
+      </p>
+
+      <p>
+        Используйте этот номер для отслеживания отправления.
+      </p>
+
+      <br>
+
+      <p>Спасибо за покупку!</p>
+
+      <p>D.ZHELEZNOV</p>
+    `,
+  });
+}

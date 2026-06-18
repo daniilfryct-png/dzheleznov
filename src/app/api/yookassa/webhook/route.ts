@@ -4,8 +4,10 @@ import {
   createCdekOrder,
   getCdekOrder,
 } from "@/lib/cdek";
-import { sendOrderEmail } from "@/lib/mail";
-
+import {
+  sendOrderEmail,
+  sendTrackingEmail,
+} from "@/lib/mail";
 export async function GET() {
   return NextResponse.json({
     status: "ok",
@@ -87,6 +89,16 @@ export async function POST(request: NextRequest) {
                     cdekOrder?.entity?.cdek_number || null,
                 },
               });
+              if (
+                order.email &&
+                cdekOrder?.entity?.cdek_number
+              ) {
+                await sendTrackingEmail(
+                  order.email,
+                  order.id,
+                  cdekOrder.entity.cdek_number
+                );
+              }
             }
 
           } catch (cdekError) {
