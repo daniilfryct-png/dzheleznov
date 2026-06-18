@@ -89,15 +89,6 @@ export async function POST(request: NextRequest) {
               });
             }
 
-            console.log(
-              "CDEK ORDER:",
-              JSON.stringify(cdekOrder, null, 2)
-            );
-
-            console.log(
-              "TRACKING NUMBER:",
-              cdekOrder?.entity?.cdek_number
-            );
           } catch (cdekError) {
             console.error(
               "CDEK CREATE ERROR:",
