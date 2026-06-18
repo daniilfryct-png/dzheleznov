@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { createCdekOrder } from "@/lib/cdek";
+import {
+  createCdekOrder,
+  getCdekOrder,
+} from "@/lib/cdek";
 import { sendOrderEmail } from "@/lib/mail";
 
 export async function GET() {
@@ -70,12 +73,18 @@ export async function POST(request: NextRequest) {
             });
 
             if (cdekResult?.entity?.uuid) {
+              const cdekOrder = await getCdekOrder(
+                cdekResult.entity.uuid
+              );
+
               await prisma.order.update({
                 where: {
                   id: order.id,
                 },
                 data: {
                   cdekOrderId: cdekResult.entity.uuid,
+                  trackingNumber:
+                    cdekOrder?.entity?.cdek_number || null,
                 },
               });
             }
