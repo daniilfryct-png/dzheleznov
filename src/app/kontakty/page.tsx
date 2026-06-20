@@ -42,7 +42,7 @@ export default function ContactPage() {
 
             <div>
               <h2 className="text-xs uppercase tracking-widest mb-4">PRIVACY </h2>
-              <div className="text-sm text-muted leading-relaxed whitespace-pre-line">
+              <pre className="text-sm text-muted leading-relaxed whitespace-pre-wrap font-sans overflow-x-auto">
                 Политика в отношении обработки персональных данных<br />
                 1. Общие положения
 
@@ -186,7 +186,7 @@ export default function ContactPage() {
 14.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты info@d-zheleznov.ru.
 14.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
 14.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https:/d-zheleznov.ru/privacy.<br />
-              </div>
+              </pre>
             </div>
           </div>
 
