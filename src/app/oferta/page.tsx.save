@@ -1,0 +1,13 @@
+export default function OfertaPage() {
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-20">
+      <h1 className="text-2xl mb-8 tracking-widest uppercase">
+        Публичная оферта
+      </h1>
+
+      <div className="text-sm text-muted leading-relaxed whitespace-pre-wrap">
+        ТЕСТ ОФЕРТЫ
+      </div>
+    </div>
+  );
+}

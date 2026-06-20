@@ -26,6 +26,12 @@ export function Footer() {
             <Link href="/" className="font-display text-2xl tracking-[0.2em] uppercase">
               D.ZHELEZNOV
             </Link>
+              <a
+                href="/oferta"
+                className="hover:text-text transition-colors"
+              >
+              Публичная оферта
+              </a>
             <p className="text-sm text-muted mt-4 max-w-xs leading-relaxed">
               Дизайнер.
             </p>
