@@ -26,12 +26,6 @@ export function Footer() {
             <Link href="/" className="font-display text-2xl tracking-[0.2em] uppercase">
               D.ZHELEZNOV
             </Link>
-              <a
-                href="/oferta"
-                className="hover:text-text transition-colors"
-              >
-              Публичная оферта
-              </a>
             <p className="text-sm text-muted mt-4 max-w-xs leading-relaxed">
               Дизайнер.
             </p>
@@ -70,6 +64,12 @@ export function Footer() {
               ))}
             </ul>
             <div className="mt-6 text-sm text-muted space-y-1">
+              <a
+                href="/oferta"
+                className="hover:text-text transition-colors"
+              >
+              Публичная оферта
+              </a>
               <p>
                 <a href="mailto:info@d-zheleznov.ru" className="hover:text-text">info@d-zheleznov.ru</a>
               </p>
