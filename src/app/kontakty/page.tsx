@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [agree, setAgree] = useState(false);
 
   return (
     <div className="py-8 md:py-12">
@@ -223,7 +224,31 @@ export default function ContactPage() {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="input-field resize-none"
                 />
-                <button type="submit" className="btn-primary w-full">Отправить</button>
+                <label className="flex items-start gap-3 text-xs text-muted">
+                  <input
+                    type="checkbox"
+                    checked={agree}
+                    onChange={(e) => setAgree(e.target.checked)}
+                    required
+                    className="mt-1 accent-text"
+                  />
+
+                  <span>
+                    Я даю согласие на обработку персональных данных и принимаю{" "}
+                    <a
+                      href="/privacy"
+                      target="_blank"
+                      className="underline hover:text-text"
+                    >
+                      Политику конфиденциальности
+                    </a>.
+                  </span>
+                </label>
+                <button
+                  type="submit"
+                  disabled={!agree}
+                  className="btn-primary w-full disabled:opacity-50"
+                >Отправить</button>
               </form>
             )}
           </div>

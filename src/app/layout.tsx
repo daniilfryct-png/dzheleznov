@@ -4,6 +4,7 @@ import { PromoBar } from "@/components/layout/PromoBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/store/CartDrawer";
+import CookieBanner from "@/components/CookieBanner";
 import { CartProvider } from "@/contexts/CartContext";
 import { FavoritesProvider } from "@/contexts/FavoritesContext";
 import { RecentlyViewedProvider } from "@/contexts/RecentlyViewedContext";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <main>{children}</main>
               <Footer />
               <CartDrawer />
+              <CookieBanner />
             </RecentlyViewedProvider>
           </FavoritesProvider>
         </CartProvider>

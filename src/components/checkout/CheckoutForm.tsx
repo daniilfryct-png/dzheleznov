@@ -13,6 +13,7 @@ export function CheckoutForm() {
   const router = useRouter();
   const { items, total, clearCart } = useCart();
   const [loading, setLoading] = useState(false);
+  const [agree, setAgree] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [cdekPoints, setCdekPoints] = useState<any[]>([]);
   const [deliveryPrice, setDeliveryPrice] = useState(450);
@@ -244,7 +245,36 @@ useEffect(() => {
             </div>
           </div>
           {error && <p className="text-xs text-red-600 mt-4">{error}</p>}
-          <button type="submit" disabled={loading} className="btn-primary w-full mt-6 disabled:opacity-50">
+          <label className="flex items-start gap-3 mt-6 text-xs text-muted">
+            <input
+              type="checkbox"
+              checked={agree}
+              onChange={(e) => setAgree(e.target.checked)}
+              className="mt-1 accent-text"
+              required
+            />
+
+            <span>
+              Я ознакомлен(а) с{" "}
+              <a
+                href="/privacy"
+                target="_blank"
+                className="underline hover:text-text"
+              >
+                Политикой конфиденциальности
+              </a>{" "}
+              и{" "}
+              <a
+                href="/oferta"
+                target="_blank"
+                className="underline hover:text-text"
+              >
+                Публичной офертой
+              </a>{" "}
+              и даю согласие на обработку персональных данных.
+            </span>
+          </label>
+          <button type="submit" disabled={loading || !agree} className="btn-primary w-full mt-6 disabled:opacity-50">
             {loading ? "Обработка..." : "Оформить заказ"}
           </button>
         </div>
