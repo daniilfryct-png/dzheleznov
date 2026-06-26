@@ -104,7 +104,11 @@ export function QuickView({ product, isOpen, onClose }: QuickViewProps) {
                         <button
                           key={i}
                           onClick={() => setActiveImage(i)}
-                          className={`relative w-16 h-16 flex-shrink-0 border border-border/60 ${activeImage === i ? "ring-1 ring-text" : "opacity-60"}`}
+                          className={`relative w-16 h-16 flex-shrink-0 overflow-hidden transition-all duration-300 ${
+                            activeImage === i
+                              ? "opacity-100 scale-105"
+                              : "opacity-60 hover:opacity-100"
+                          }`}
                         >
                           <ProductCardImage
                             src={img}

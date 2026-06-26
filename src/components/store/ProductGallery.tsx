@@ -61,10 +61,10 @@ export function ProductGallery({ images, name }: ProductGalleryProps) {
               whileTap={{ scale: 0.96 }}
               onClick={() => setActiveIndex(index)}
               className={cn(
-                "relative w-16 h-20 overflow-hidden border transition-all duration-300",
+                "relative w-16 h-20 overflow-hidden transition-all duration-300",
                 activeIndex === index
-                  ? "border-text opacity-100"
-                  : "border-border opacity-50 hover:opacity-80 hover:border-muted"
+                  ? "opacity-100 scale-105"
+                  : "opacity-50 hover:opacity-80"
               )}
             >
               <Image src={img} alt="" fill className="object-cover" sizes="64px" />
