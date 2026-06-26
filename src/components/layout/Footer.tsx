@@ -11,7 +11,10 @@ const shopLinks = [
 
 const infoLinks = [
   { href: "/o-brende", label: "О бренде" },
-  { href: "/kontakty", label: "Контакты,политика конфиденциальности" },
+  { href: "/kontakty", label: "Контакты" },
+  { href: "/privacy", label: "Политика конфиденциальности" },
+  { href: "/oferta", label: "Публичная оферта" },
+  { href: "/vozvrat", label: "Возврат товара" },
 ];
 
 export function Footer() {
