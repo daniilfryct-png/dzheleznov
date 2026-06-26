@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -53,7 +54,7 @@ export default function CookieBanner() {
           Понятно
         </button>
 
-        <a
+        <Link
           href="/privacy"
           className="
           text-[11px]
@@ -65,7 +66,7 @@ export default function CookieBanner() {
           "
         >
           Подробнее
-        </a>
+        </Link>
       </div>
     </div>
   );
