@@ -21,24 +21,48 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 left-6 right-6 md:left-auto md:w-[420px] bg-black text-white p-5 rounded-xl shadow-2xl z-50">
-      <p className="text-sm leading-6">
+    <div className="fixed bottom-5 right-5 w-[300px] z-50
+    bg-black/80 backdrop-blur-xl
+    border border-white/10
+    rounded-2xl
+    p-4
+    shadow-[0_20px_60px_rgba(0,0,0,0.45)]
+    animate-[fadeIn_.35s_ease]">
+      <p className="text-[12px] leading-5 text-white/80">
         Мы используем файлы cookie и локальное хранилище браузера для
         корректной работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь
         с их использованием.
       </p>
 
-      <div className="mt-4 flex gap-3">
+      <div className="mt-4 flex items-center gap-3">
         <button
           onClick={accept}
-          className="bg-white text-black px-4 py-2 rounded-md text-sm"
+          className="
+          px-4 py-2
+          rounded-full
+          bg-white
+          text-black
+          text-[11px]
+          tracking-widest
+          uppercase
+          transition-all
+          duration-300
+          hover:bg-neutral-200
+          "
         >
           Понятно
         </button>
 
         <a
           href="/privacy"
-          className="text-sm underline self-center"
+          className="
+          text-[11px]
+          uppercase
+          tracking-widest
+          text-white/60
+          hover:text-white
+          transition-colors
+          "
         >
           Подробнее
         </a>
