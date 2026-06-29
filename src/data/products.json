@@ -71,7 +71,7 @@
       "/content/collections/remind/remind-jacket/3.PNG"
     ],
     "collection": "remind",
-    "featured": true,
+    "featured": false,
     "category": "одежда"
   },
   {
@@ -377,7 +377,7 @@
       "/content/collections/vl-pt2/coat-cross/3.jpg"
     ],
     "collection": "vl-pt2",
-    "featured": true,
+    "featured": false,
     "category": "одежда"
   },
   {
