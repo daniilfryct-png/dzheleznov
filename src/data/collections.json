@@ -28,14 +28,12 @@
     "statement": "",
     "coverImage": "/content/collections/remind/IMG_2053.JPG",
     "campaignImages": [
-      "/content/collections/remind/remind-cowboy-jeans/1.PNG",
-      "/content/collections/remind/remind-hoodie/1.PNG",
-      "/content/collections/remind/remind-jacket/1%27.PNG",
-      "/content/collections/remind/remind-longsleeve/1.PNG",
-      "/content/collections/remind/remind-polo/1.PNG",
-      "/content/collections/remind/remind-skirt/1.PNG",
-      "/content/collections/remind/remind-striped-sweatshirt/1.PNG",
-      "/content/collections/remind/remind-stripped-jeans/1.PNG"
+      "/public/content/archive/IMG_2889.JPG",
+      "/public/content/archive/IMG_2060.JPG",
+      "/public/content/archive/IMG_3338.jpg",
+      "/public/content/archive/IMG_1952.JPG",
+      "/public/content/archive/IMG_2414.JPG",
+      "/public/content/archive/IMG_0156 2.JPG"
     ],
     "lookbook": [
       "/public/content/archive/IMG_2889.JPG",
@@ -43,7 +41,7 @@
       "/public/content/archive/IMG_3338.jpg",
       "/public/content/archive/IMG_1952.JPG",
       "/public/content/archive/IMG_2414.JPG",
-      "public/content/archive/IMG_0156 2.JPG"
+      "/public/content/archive/IMG_0156 2.JPG"
     ],
     "designNotes": [],
     "behindTheScenes": [],
