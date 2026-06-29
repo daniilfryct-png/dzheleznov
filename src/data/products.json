@@ -33,6 +33,7 @@
     "description": "- 97% ХЛОПОК 3% ЭЛАСТАН\n- 400 ГР/М2\n- OVERSIZE УКОРОЧЕННЫЙ КРОЙ\n- ИТАЛЬЯНСКИЙ ФУТЕР\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "S",
       "M",
@@ -57,6 +58,7 @@
     "description": "- 70% ХЛОПОК 7% ЭЛАСТАН\n- ПЛОТНОСТЬ: 400 ГР/М2\n- REGULAR FIT\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "S",
       "M",
@@ -105,6 +107,7 @@
     "description": "- 100% ХЛОПОК \n- 180 ГР/М2\n -УКОРОЧЕННЫЙ КРОЙ\n - ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "S",
       "M",
@@ -129,6 +132,7 @@
     "description": "- 93% ХЛОПОК 7% ЭЛАСТАН\n- 310 ГР/М2\n- ОБЛЕГАЮЩИЙ КРОЙ\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "XS",
       "S",
@@ -153,6 +157,7 @@
     "description": "- 80% ПОЛИЭСТЕР 20% ЭЛАСТАН\n- 320 ГР/М2\n- ОБЛЕГАЮЩИЙ КРОЙ\n- ВЯЗАННЫЙ ИТАЛЬЯНСКИЙ ДВУХСЛОЙНЫЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "XS",
       "S",
@@ -177,6 +182,7 @@
     "description": "- 100% ХЛОПОК\n- ПЛОТНОСТЬ: 360 ГР/М2\n- REGULAR FIT\n- ИТАЛЬЯНСКИЙ ДЕНИМ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": false,
     "sizes": [
       "S",
       "M",
@@ -201,6 +207,7 @@
     "description": "-unique material\n-YKK zippers\n-unusual cut\nОТПРАВКА В ТЕЧЕНИЕ 2-x НЕДЕЛЬ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -227,6 +234,7 @@
     "description": "-100% ХЛОПОК\n-ПОДКЛАД 100% ВИСКАЗА\n-УКОРОЧЕННЫЙ КРОЙ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -253,6 +261,7 @@
     "description": "-100% КОЖА\n-ИТАЛЬЯНСКАЯ КОЖА\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -279,6 +288,7 @@
     "description": "-100% ХЛОПОК\n-УКОРОЧЕННЫЙ КРОЙ\n-ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -304,6 +314,7 @@
     "description": "-100% ХЛОПОК\n-УКОРОЧЕННЫЙ КРОЙ\n-ИТАЛЬЯНСКИЙ ТРИКОТАЖ\nОТПРАВКА В ТЕЧЕНИЕ 1-1,5 НЕДЕЛИ",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -327,6 +338,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -352,6 +364,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -376,6 +389,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -399,6 +413,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -422,6 +437,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -445,6 +461,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -469,6 +486,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -495,6 +513,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
@@ -520,6 +539,7 @@
     "description": "Описание будет добавлено.",
     "fabric": "",
     "construction": "",
+    "hasSizeGuide": true,
     "sizes": [
       "XS",
       "S",
