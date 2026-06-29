@@ -10,7 +10,7 @@ export function InstagramPreview() {
         <div className="flex justify-between items-end mb-6">
           <div>
             <h2 className="section-title">Instagram</h2>
-            <p className="section-subtitle mt-1">@dzheleznov</p>
+            <p className="section-subtitle mt-1">@d.zheleznov_</p>
           </div>
           <a href="https://instagram.com/d.zheleznov_" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest hover:text-text transition-colors">
             Подписаться →
