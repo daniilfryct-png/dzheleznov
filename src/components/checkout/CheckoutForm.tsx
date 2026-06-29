@@ -30,14 +30,18 @@ export function CheckoutForm() {
   });
 useEffect(() => {
   async function loadPvz() {
-    if (!form.city || form.city.length < 2) {
+    if (!form.city || form.city.length < 3) {
       setCdekPoints([]);
       return;
     }
 
     try {
+      const controller = new AbortController();
       const res = await fetch(
-        `/api/cdek/pvz?city=${encodeURIComponent(form.city)}`
+        `/api/cdek/pvz?city=${encodeURIComponent(form.city)}`,
+        {
+          signal: controller.signal,
+        }
       );
 
       const data = await res.json();
@@ -50,17 +54,23 @@ useEffect(() => {
     }
   }
 
-  const timeout = setTimeout(loadPvz, 500);
+  const timeout = setTimeout(loadPvz, 250);
 
-  return () => clearTimeout(timeout);
+  return () => {
+    clearTimeout(timeout);
+  };
 }, [form.city]);
 useEffect(() => {
   async function calculateDelivery() {
     if (!form.pickupPoint) return;
 
     try {
+      const controller = new AbortController();
       const res = await fetch(
-        `/api/cdek/calculate?code=${form.pickupPoint}`
+        `/api/cdek/pvz?city=${encodeURIComponent(form.city)}`,
+        {
+          signal: controller.signal,
+        }
       );
 
       const data = await res.json();
