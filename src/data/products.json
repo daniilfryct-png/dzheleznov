@@ -240,7 +240,7 @@
       "/content/collections/none/jacket-velvet/4.PNG"
     ],
     "collection": "none",
-    "featured": false,
+    "featured": true,
     "category": "одежда"
   },
   {
@@ -266,7 +266,7 @@
       "/content/collections/none/leather-jacket/4.jpg"
     ],
     "collection": "none",
-    "featured": true,
+    "featured": false,
     "category": "одежда"
   },
   {
