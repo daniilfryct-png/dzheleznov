@@ -44,7 +44,7 @@
       "/content/collections/remind/remind-hoodie/3.PNG"
     ],
     "collection": "remind",
-    "featured": true,
+    "featured": false,
     "category": "одежда"
   },
   {
@@ -92,7 +92,7 @@
       "/content/collections/remind/remind-longsleeve/3.PNG"
     ],
     "collection": "remind",
-    "featured": true,
+    "featured": false,
     "category": "одежда"
   },
   {
@@ -164,7 +164,7 @@
       "/content/collections/remind/remind-striped-sweatshirt/3.PNG"
     ],
     "collection": "remind",
-    "featured": false,
+    "featured": true,
     "category": "одежда"
   },
   {
@@ -266,7 +266,7 @@
       "/content/collections/none/leather-jacket/4.jpg"
     ],
     "collection": "none",
-    "featured": false,
+    "featured": true,
     "category": "одежда"
   },
   {
@@ -456,7 +456,7 @@
       "/content/collections/vl-pt2/shirt-black/3.jpeg"
     ],
     "collection": "vl-pt2",
-    "featured": false,
+    "featured": true,
     "category": "одежда"
   },
   {
