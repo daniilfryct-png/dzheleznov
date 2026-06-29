@@ -8,6 +8,7 @@ type RawProduct = Omit<Product, "care" | "color" | "colors" | "isNew" | "inStock
   care?: string;
   color?: string;
   colors?: string[];
+  hasSizeGuide?: boolean;
   isNew?: boolean;
   inStock?: boolean;
   oldPrice?: number;
@@ -29,6 +30,7 @@ function enrichProduct(raw: RawProduct): Product {
   return {
     ...raw,
     images: sanitizeImages(raw.images),
+    hasSizeGuide: raw.hasSizeGuide ?? true,
     care: raw.care ?? "Химчистка. Не отбеливать. Гладить на низкой температуре.",
     color: raw.color ?? "Чёрный",
     colors: raw.colors ?? [raw.color ?? "Чёрный"],

@@ -15,6 +15,7 @@ export interface Product {
   images: string[];
   collection: string;
   featured: boolean;
+  hasSizeGuide?: boolean;
   isNew: boolean;
   inStock: boolean;
   category: string;

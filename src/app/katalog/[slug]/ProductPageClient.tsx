@@ -136,9 +136,15 @@ export function ProductPageClient({ product, related }: Props) {
               <div>
                 <div className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1 mb-3">
                   <p className="text-xs uppercase tracking-widest">Размер</p>
-                  <button type="button" onClick={() => setSizeGuideOpen(true)} className="text-xs text-muted hover:text-text underline flex-shrink-0">
-                    Размерная сетка
-                  </button>
+                  {product.hasSizeGuide && (
+                    <button
+                      type="button"
+                      onClick={() => setSizeGuideOpen(true)}
+                      className="text-xs text-muted hover:text-text underline flex-shrink-0"
+                    >
+                      Размерная сетка
+                    </button>
+                  )}
                 </div>
                 <SizeSelector sizes={sizes} selected={selectedSize} onSelect={setSelectedSize} label="" />
               </div>
