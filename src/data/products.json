@@ -219,8 +219,7 @@
       "/content/collections/none/jacket-art/1.PNG",
       "/content/collections/none/jacket-art/2.PNG",
       "/content/collections/none/jacket-art/3.jpg",
-      "/content/collections/none/jacket-art/4.JPG",
-      "/content/collections/none/jacket-art/5.PNG"
+      "/content/collections/none/jacket-art/4.JPG"
     ],
     "collection": "none",
     "featured": false,
@@ -246,8 +245,7 @@
     "images": [
       "/content/collections/none/jacket-velvet/1.png",
       "/content/collections/none/jacket-velvet/2.png",
-      "/content/collections/none/jacket-velvet/3.JPG",
-      "/content/collections/none/jacket-velvet/4.PNG"
+      "/content/collections/none/jacket-velvet/3.JPG"
     ],
     "collection": "none",
     "featured": true,
@@ -299,7 +297,6 @@
     "images": [
       "/content/collections/none/t-shirt/1.PNG",
       "/content/collections/none/t-shirt/2.PNG",
-      "/content/collections/none/t-shirt/3.PNG",
       "/content/collections/none/t-shirt/IMG_3498%202.JPG"
     ],
     "collection": "none",
@@ -349,8 +346,7 @@
     "images": [
       "/content/collections/none/trousers-is-gook/1.PNG",
       "/content/collections/none/trousers-is-gook/2.PNG",
-      "/content/collections/none/trousers-is-gook/3.PNG",
-      "/content/collections/none/trousers-is-gook/4.PNG"
+      "/content/collections/none/trousers-is-gook/3.PNG"
     ],
     "collection": "none",
     "featured": false,
@@ -496,7 +492,6 @@
     ],
     "images": [
       "/content/collections/ls-2-25/waves-sweatshirt/IMG_0671.PNG",
-      "/content/collections/ls-2-25/waves-sweatshirt/IMG_0673.PNG",
       "/content/collections/ls-2-25/waves-sweatshirt/IMG_3935.JPG",
       "/content/collections/ls-2-25/waves-sweatshirt/IMG_3937.JPG",
       "/content/collections/ls-2-25/waves-sweatshirt/IMG_8668%202.JPG"
@@ -524,7 +519,6 @@
     "images": [
       "/content/collections/ls-2-25/waxzip-jeans/IMG_3924.PNG",
       "/content/collections/ls-2-25/waxzip-jeans/IMG_3925.PNG",
-      "/content/collections/ls-2-25/waxzip-jeans/IMG_3926.PNG",
       "/content/collections/ls-2-25/waxzip-jeans/IMG_3940.PNG"
     ],
     "collection": "ls-2-25",
