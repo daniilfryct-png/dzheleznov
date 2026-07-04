@@ -527,8 +527,8 @@
   },
   {
     "id": "prod-022",
-    "slug": "stas",
-    "name": "stas",
+    "slug": "soon",
+    "name": "soon",
     "price": 10000,
     "currency": "₽",
     "description": "Описание будет добавлено.",
@@ -542,7 +542,7 @@
       "L"
     ],
     "images": [
-      "/content/collections/summer/stas.jpeg"
+      "/content/archive/FFFG.png"
     ],
     "collection": "summer",
     "featured": false,
