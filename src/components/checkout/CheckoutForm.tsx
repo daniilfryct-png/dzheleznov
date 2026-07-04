@@ -30,6 +30,7 @@ export function CheckoutForm() {
   });
 useEffect(() => {
   async function loadPvz() {
+    console.log("pickupPoint:", form.pickupPoint);
     if (!form.city || form.city.length < 3) {
       setCdekPoints([]);
       return;
@@ -65,22 +66,27 @@ useEffect(() => {
     if (!form.pickupPoint) return;
 
     try {
-      const controller = new AbortController();
+      console.log("pickup:", form.pickupPoint);
+
       const res = await fetch(
-        `/api/cdek/pvz?city=${encodeURIComponent(form.city)}`,
-        {
-          signal: controller.signal,
-        }
+        `/api/cdek/calculate?code=${form.pickupPoint}`
       );
 
+      console.log("status:", res.status);
+
       const data = await res.json();
+
+      console.log("DATA:", data);
 
       const tariff = data.tariff_codes?.find(
         (t: any) => t.tariff_code === 136
       );
 
+      console.log("FOUND:", tariff);
+
       if (tariff) {
         setDeliveryPrice(tariff.delivery_sum);
+        console.log("NEW PRICE:", tariff.delivery_sum);
       }
     } catch (error) {
       console.error("Ошибка расчёта доставки:", error);
@@ -88,11 +94,13 @@ useEffect(() => {
   }
 
   calculateDelivery();
+  console.log("calculateDelivery started");
 }, [form.pickupPoint]);
 
 
   const delivery = deliveryOptions.find((d) => d.id === form.deliveryMethod);
   const orderTotal = total + deliveryPrice;
+  console.log("deliveryPrice state:", deliveryPrice);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

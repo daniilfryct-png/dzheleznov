@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
 
     const data = await response.json();
 
-    console.log("CDEK RESPONSE:", data);
+   // console.log("CDEK RESPONSE:", data);
 
     const filtered = Array.isArray(data)
       ? data.filter((p: any) =>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getCdekToken } from "@/lib/cdek";
 
 export async function GET(request: NextRequest) {
+  console.log("CALCULATE API HIT");
   try {
     const code =
       request.nextUrl.searchParams.get("code");
@@ -46,6 +47,7 @@ export async function GET(request: NextRequest) {
 
     // Считаем доставку до города выбранного ПВЗ
     const response = await fetch(
+
       "https://api.cdek.ru/v2/calculator/tarifflist",
       {
         method: "POST",
@@ -76,9 +78,18 @@ export async function GET(request: NextRequest) {
       }
     );
 
-    const data = await response.json();
+    const text = await response.text();
 
-    return NextResponse.json(data);
+    console.log("STATUS:", response.status);
+    console.log("RAW RESPONSE:");
+    console.log(text);
+
+    return new NextResponse(text, {
+      status: response.status,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (error) {
     return NextResponse.json(
       {
