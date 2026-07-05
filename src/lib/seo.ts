@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Product, Collection } from "@/types";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://dzheleznov.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://d-zheleznov.ru";
 const DEFAULT_OG_IMAGE = "/content/collections/remind/remind-cowboy-jeans/1.PNG";
 
 export const defaultMetadata: Metadata = {
