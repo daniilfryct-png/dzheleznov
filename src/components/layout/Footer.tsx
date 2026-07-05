@@ -66,13 +66,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 text-sm text-muted space-y-1">
-              <a
-                href="/oferta"
-                className="hover:text-text transition-colors"
-              >
-              Публичная оферта
-              </a>
+            
               <p>
                 <a href="mailto:info@d-zheleznov.ru" className="hover:text-text">info@d-zheleznov.ru</a>
               </p>
