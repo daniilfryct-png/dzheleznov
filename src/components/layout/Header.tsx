@@ -112,7 +112,7 @@ export function Header() {
 
             <Link
               href="/"
-              className="justify-self-center font-display text-xl md:text-2xl tracking-[0.25em] uppercase px-2"
+              className="justify-self-center font-display text-base md:text-2xl tracking-[0.12em] md:tracking-[0.25em] uppercase px-1 md:px-2"
             >
               D.ZHELEZNOV
             </Link>
