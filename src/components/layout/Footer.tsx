@@ -72,7 +72,6 @@ export function Footer() {
               </p>
               <p>+7 (966) 059-82-68</p>
             </div>
-          </div>
 
           <div>
             <h3 className="text-xs uppercase tracking-widest mb-4">Рассылка</h3>
