@@ -87,7 +87,7 @@ export function Header() {
           <div className="grid grid-cols-[1fr_auto_1fr] items-center h-14 md:h-16">
             <div className="flex items-center justify-self-start min-w-0">
               <button
-                className="md:hidden p-2 -ml-2"
+                className="md:hidden p-2 -ml-2 mr-4"
                 onClick={() => setMobileOpen(true)}
                 aria-label="Меню"
               >
